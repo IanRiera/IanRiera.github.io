@@ -76,7 +76,7 @@ const NavBar = () => {
                     {/* <CustomLink href='/articles' title="Articles" className="ml-4" /> */}
                 </nav>
 
-                <nav className="flex item-center justify-center flex-wrap">
+                <nav className="flex items-center justify-center flex-wrap">
                     <button
                         onClick={() => setMode(mode === "light" ? "dark" : "light")}
                         className={`w-6 mr-3 flex items-center justify-center rounded-full 
@@ -129,7 +129,7 @@ const NavBar = () => {
                             {/* <CustomMobileLink href='/articles' title="Articles" className="" toggle={handleClick} /> */}
                         </nav>
 
-                        <nav className="flex item-center justify-center flex-wrap mt-2">
+                        <nav className="flex items-center justify-center flex-wrap mt-2">
                             <button
                                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
                                 className={`w-6 mr-3 flex items-center justify-center rounded-full 
