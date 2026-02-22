@@ -27,7 +27,7 @@ export default function Home() {
               <Image src={profilePic} alt="IanRiera" className='w-full
               h-auto max-w-lg rounded-lg shadow-none transition-shadow duration-300
               ease-in-out hover:shadow-lg hover:shadow-black/30
-              lg:hidden md:inline-block md:w-full'
+              md:w-full'
               priority
               sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
