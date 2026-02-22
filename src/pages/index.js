@@ -27,7 +27,7 @@ export default function Home() {
               <Image src={profilePic} alt="IanRiera" className='w-full
               h-auto max-w-lg rounded-lg shadow-none transition-shadow duration-300
               ease-in-out hover:shadow-lg hover:shadow-black/30
-              lg:hidden md:inline-block md:w-full'
+              md:w-full'
               priority
               sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
@@ -44,7 +44,7 @@ export default function Home() {
               From developing advanced algorithms to creating interactive visual applications, I embrace the multidimensional nature of computer vision.
               Join me on this exciting journey as we dive into the limitless potential of cutting-edge technologies and their real-world applications.
               </p>
-              <div className='flex items-center self-start mt-2 lg:self-center'>
+              <div className='flex items-center self-start mt-2 gap-4 lg:self-center lg:flex-col lg:items-center lg:gap-3'>
                 <Link href="/cv_ian_riera.pdf" target={"_blank"}
                   className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
                 hover:bg-light hover:text-dark border border-solid border-transparent hover:border-dark
@@ -55,11 +55,11 @@ export default function Home() {
                 >Resume <ArrowLink className='ml-2' />
                 </Link>
                 <Link href="mailto:ian.riera.smolinska@gmail.com" target={"_blank"}
-                className='ml-4 text-lg font-medium capitalize text-dark underline
+                className='text-lg font-medium capitalize text-dark underline
                 dark:text-light md:text-base'
                 >Contact</Link>
                 <Link href="https://IanRiera.github.io/salty-crackers/v1/" target={"_blank"}
-                className='ml-4 text-lg font-medium text-dark underline
+                className='text-lg font-medium text-dark underline
                 dark:text-light md:text-base'
                 >Salty Crackers</Link>
               </div>
