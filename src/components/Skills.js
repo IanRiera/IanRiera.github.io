@@ -53,7 +53,7 @@ const Skills = () => {
     return (
         <div>
             <h2 className="font-bold text-8xl mt-64 w-full text-center
-            dark:text-light md:text-6xl md:mt-32">Skills</h2>
+            dark:text-light lg:text-6xl lg:mt-24 md:text-6xl md:mt-20">Skills</h2>
             <AnimatedColorBar title="Python" width={85} color="green" className="!bg-green-600"/>
             <AnimatedColorBar title="JavaScript" width={60} color="green" className="!bg-green-600"/>
             <AnimatedColorBar title="C++" width={55} color="green" className="!bg-green-600" />
