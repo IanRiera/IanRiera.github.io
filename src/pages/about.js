@@ -1,22 +1,35 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Head from "next/head";
-import React, { useRef, useEffect } from "react";
 import profilePic from "../../public/images/profile/ian_digital_artwork.png";
 import Image from "next/image";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
 
 
-const about = () => {
+const About = () => {
+    const title = "About | Ian Riera";
+    const description = "Background, experience, and education of Ian Riera, a Computer Vision Engineer focused on practical AI solutions.";
+    const url = "https://ianriera.github.io/about";
+    const image = "https://ianriera.github.io/images/profile/ian_digital_artwork.png";
+
     return (
         <>
             <Head>
-                <title>About | Ian Riera</title>
-                <meta name="description" content="Ian Riera personal website" />
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <link rel="canonical" href={url} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:url" content={url} />
+                <meta property="og:image" content={image} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={image} />
             </Head>
             <TransitionEffect />
             <main className="pt-12 flex w-full flex-col items-center justify-center dark:text-light
@@ -69,6 +82,6 @@ const about = () => {
         </>
 
     )
-}
+};
 
-export default about
+export default About;

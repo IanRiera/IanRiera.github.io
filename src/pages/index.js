@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import { ArrowLink } from "@/components/Icons"
 import Layout from '@/components/Layout'
 import Image from 'next/image'
@@ -8,15 +7,27 @@ import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import TransitionEffect from '@/components/TransitionEffect'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
+  const title = "Ian Riera Smolinska | Computer Vision Engineer";
+  const description = "Computer Vision Engineer building AI products across 3D reconstruction, tracking, and applied machine learning.";
+  const url = "https://ianriera.github.io/";
+  const image = "https://ianriera.github.io/images/profile/ian_mult_hats.png";
+
   return (
     <>
       <Head>
-        <title>Ian Riera Smolinska</title>
-        <meta name="description" content="Ian Riera personal website" />
-
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
       </Head>
       <TransitionEffect />
       <main className='flex items-center text-dark w-full min-h-screen

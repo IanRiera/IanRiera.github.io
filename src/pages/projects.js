@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
@@ -93,12 +92,27 @@ const Project = ({ title, type, img, summary, link, github }) => {
         </article>
     )
 }
-const projects = () => {
+const Projects = () => {
+    const title = "Projects | Ian Riera";
+    const description = "Selected computer vision and machine learning projects, including 3D reconstruction, tracking, and scene understanding.";
+    const url = "https://ianriera.github.io/projects";
+    const image = "https://ianriera.github.io/images/projects/scene_understanding.png";
+
     return (
         <>
             <Head>
-                <title>Projects | Ian Riera</title>
-                <meta name="description" content="Ian Riera personal website" />
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <link rel="canonical" href={url} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:url" content={url} />
+                <meta property="og:image" content={image} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={image} />
             </Head>
             <TransitionEffect />
             <main className="pt-12 w-full mb-16 flex flex-col items-center justify-center
@@ -180,6 +194,6 @@ const projects = () => {
 
         </>
     )
-}
+};
 
-export default projects
+export default Projects;
