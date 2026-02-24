@@ -11,9 +11,11 @@ const Footer = () => {
             lg:flex-col lg:py-6">
                 <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
                 <div className="flex items-center lg:py-2">
-                Kudos to&nbsp;<Link href="https://devdreaming.com"
-                className="underline undirle-offset-2"
-                >CodeBucks</Link>
+                Built with&nbsp;<Link href="https://nextjs.org/"
+                className="underline underline-offset-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Next.js</Link>&nbsp;and Tailwind CSS.
                 </div>
             </Layout>
         </footer>

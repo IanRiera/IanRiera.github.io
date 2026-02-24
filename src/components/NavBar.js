@@ -76,7 +76,7 @@ const NavBar = () => {
                     <CustomLink href='/' title="Home" className="mr-4" />
                     <CustomLink href='/about' title="About" className="mx-4" />
                     <CustomLink href='/projects' title="Projects" className="mx-4" />
-                    {/* <CustomLink href='/articles' title="Articles" className="ml-4" /> */}
+                    <CustomLink href='/articles' title="Articles" className="ml-4" />
                 </nav>
 
                 <nav className="flex items-center justify-center flex-wrap">
@@ -134,7 +134,7 @@ const NavBar = () => {
                             <CustomMobileLink href='/' title="Home" className="" toggle={handleClick} />
                             <CustomMobileLink href='/about' title="About" className="" toggle={handleClick} />
                             <CustomMobileLink href='/projects' title="Projects" className="" toggle={handleClick} />
-                            {/* <CustomMobileLink href='/articles' title="Articles" className="" toggle={handleClick} /> */}
+                            <CustomMobileLink href='/articles' title="Articles" className="" toggle={handleClick} />
                         </nav>
 
                         <nav className="flex items-center justify-center flex-wrap mt-2">
@@ -158,7 +158,7 @@ const NavBar = () => {
                                 className="w-6 mx-3 sm:mx-1">
                                 <LinkedInIcon />
                             </motion.a>
-                            <motion.a href='https://github.com/IanRiera/IanRiera' target={"_blank"} rel="noopener noreferrer"
+                            <motion.a href='https://github.com/IanRiera' target={"_blank"} rel="noopener noreferrer"
                                 aria-label="GitHub profile"
                                 whileHover={{ y: -2 }}
                                 whileTap={{ scale: 0.9 }}
