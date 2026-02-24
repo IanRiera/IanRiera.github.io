@@ -29,7 +29,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
         router.push(href);
     };
     return (
-        <button href={href} className={`${className} relative group
+        <button className={`${className} relative group
         text-light dark:text-dark my-2`}
             onClick={handleClick}>
             {title}
@@ -59,6 +59,9 @@ const NavBar = () => {
             fixed top-0 left-0 bg-gray-100 py-4 px-8 z-50 md:text-sm dark:bg-dark'>
 
             <button className="flex-col justify-center items-center hidden lg:flex"
+                aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
                 onClick={handleClick}>
                 <span className={`w-6 h-0.5 bg-dark dark:bg-light transition-all duration-300 rounded-sm 
                 ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
@@ -79,6 +82,7 @@ const NavBar = () => {
                 <nav className="flex items-center justify-center flex-wrap">
                     <button
                         onClick={() => setMode(mode === "light" ? "dark" : "light")}
+                        aria-label={mode === "light" ? "Switch to dark mode" : "Switch to light mode"}
                         className={`w-6 mr-3 flex items-center justify-center rounded-full 
             p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
                     >
@@ -89,19 +93,22 @@ const NavBar = () => {
                         }
 
                     </button>
-                    <motion.a href='https://es.linkedin.com/in/ianrierasmolinska' target={"_blank"}
+                    <motion.a href='https://es.linkedin.com/in/ianrierasmolinska' target={"_blank"} rel="noopener noreferrer"
+                        aria-label="LinkedIn profile"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.9 }}
                         className="w-6 mx-3">
                         <LinkedInIcon />
                     </motion.a>
-                    <motion.a href='https://github.com/IanRiera' target={"_blank"}
+                    <motion.a href='https://github.com/IanRiera' target={"_blank"} rel="noopener noreferrer"
+                        aria-label="GitHub profile"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.9 }}
                         className="w-6 mx-3">
                         <GithubIcon />
                     </motion.a>
-                    <motion.a href='mailto:ian.riera.smolinska@gmail.com' target={"_blank"}
+                    <motion.a href='mailto:ian.riera.smolinska@gmail.com' target={"_blank"} rel="noopener noreferrer"
+                        aria-label="Send email"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.9 }}
                         className="w-6 ml-3">
@@ -116,6 +123,7 @@ const NavBar = () => {
                 isOpen ?
 
                     <motion.div
+                    id="mobile-menu"
                     initial={{ scale: 0, opacity: 0, x:"-50%", y:"-50%" }}
                     animate={{ scale: 1, opacity: 1 }}
                     className="w-[min(90vw,28rem)] max-h-[85vh] overflow-y-auto
@@ -132,6 +140,7 @@ const NavBar = () => {
                         <nav className="flex items-center justify-center flex-wrap mt-2">
                             <button
                                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
+                                aria-label={mode === "light" ? "Switch to dark mode" : "Switch to light mode"}
                                 className={`w-6 mr-3 flex items-center justify-center rounded-full 
             p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
                             >
@@ -142,19 +151,22 @@ const NavBar = () => {
                                 }
 
                             </button>
-                            <motion.a href='https://es.linkedin.com/in/ianrierasmolinska' target={"_blank"}
+                            <motion.a href='https://es.linkedin.com/in/ianrierasmolinska' target={"_blank"} rel="noopener noreferrer"
+                                aria-label="LinkedIn profile"
                                 whileHover={{ y: -2 }}
                                 whileTap={{ scale: 0.9 }}
                                 className="w-6 mx-3 sm:mx-1">
                                 <LinkedInIcon />
                             </motion.a>
-                            <motion.a href='https://github.com/IanRiera/IanRiera' target={"_blank"}
+                            <motion.a href='https://github.com/IanRiera/IanRiera' target={"_blank"} rel="noopener noreferrer"
+                                aria-label="GitHub profile"
                                 whileHover={{ y: -2 }}
                                 whileTap={{ scale: 0.9 }}
                                 className="w-6 mx-3 bg-light dark:bg-dark rounded-full sm:mx-1">
                                 <GithubIcon />
                             </motion.a>
-                            <motion.a href='mailto:ian.riera.smolinska@gmail.com' target={"_blank"}
+                            <motion.a href='mailto:ian.riera.smolinska@gmail.com' target={"_blank"} rel="noopener noreferrer"
+                                aria-label="Send email"
                                 whileHover={{ y: -2 }}
                                 whileTap={{ scale: 0.9 }}
                                 className="w-6 ml-3 sm:mx-1">

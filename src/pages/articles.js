@@ -20,6 +20,7 @@ const FeaturedArticle = ({ img, title, summary, time, link }) => {
             <Link
                 href={link}
                 target={"_blank"}
+                rel="noopener noreferrer"
                 className="w-full inline-block cursor-pointer overflow-hidden rounded-lg
                 "
             >
@@ -32,7 +33,7 @@ const FeaturedArticle = ({ img, title, summary, time, link }) => {
                     50vw"/>
 
             </Link>
-            <Link href={link} target={"_blank"}>
+            <Link href={link} target={"_blank"} rel="noopener noreferrer">
                 <h2 className="capitalize my-2 mt-4 text-2xl font-bold over:underline
                 xs:text-lg">{title}</h2>
             </Link>
@@ -79,7 +80,7 @@ const MovingImage = ({ title, img, link }) => {
     }
 
     return (
-        <Link href={link} target={"_blank"}
+        <Link href={link} target={"_blank"} rel="noopener noreferrer"
         onMouseMove={handleMouse}
         onMouseLeave={handleMouseLeave}
             className="w-full inline-block cursor-pointer overflow-hidden rounded-lg"

@@ -45,7 +45,7 @@ export default function Home() {
               Join me on this exciting journey as we dive into the limitless potential of cutting-edge technologies and their real-world applications.
               </p>
               <div className='flex items-center self-start mt-2 gap-4 lg:self-center lg:flex-col lg:items-center lg:gap-3'>
-                <Link href="/cv_ian_riera.pdf" target={"_blank"}
+                <Link href="/cv_ian_riera.pdf" target={"_blank"} rel="noopener noreferrer"
                   className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
                 hover:bg-light hover:text-dark border border-solid border-transparent hover:border-dark
                 dark:text-dark dark:bg-light hover:dark:bg-dark
@@ -54,11 +54,11 @@ export default function Home() {
                   download={true}
                 >Resume <ArrowLink className='ml-2' />
                 </Link>
-                <Link href="mailto:ian.riera.smolinska@gmail.com" target={"_blank"}
+                <Link href="mailto:ian.riera.smolinska@gmail.com" target={"_blank"} rel="noopener noreferrer"
                 className='text-lg font-medium capitalize text-dark underline
                 dark:text-light md:text-base'
                 >Contact</Link>
-                <Link href="https://IanRiera.github.io/salty-crackers/v1/" target={"_blank"}
+                <Link href="https://IanRiera.github.io/salty-crackers/v1/" target={"_blank"} rel="noopener noreferrer"
                 className='text-lg font-medium text-dark underline
                 dark:text-light md:text-base'
                 >Salty Crackers</Link>

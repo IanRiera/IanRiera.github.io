@@ -18,6 +18,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
             <h3 className="capitalize font-bold text-2xl
             sm:text-xl xs:text-lg">{position}&nbsp;<a href={companyLink}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-primary dark:text-primaryDark capitalize"
             >@{company}</a></h3>
             <span className="capitalize font-medium text-dark/75 dark:text-light/75
