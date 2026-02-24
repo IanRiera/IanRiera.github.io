@@ -33,6 +33,7 @@ const AnimatedColorBar = ({ title, width, color }) => {
     const colorBarRef = useRef(null);
   
     useEffect(() => {
+      const currentNode = colorBarRef.current;
       const observer = new IntersectionObserver(
         (entries) => {
           const [entry] = entries;
@@ -41,13 +42,13 @@ const AnimatedColorBar = ({ title, width, color }) => {
         { threshold: 0.2 }
       );
   
-      if (colorBarRef.current) {
-        observer.observe(colorBarRef.current);
+      if (currentNode) {
+        observer.observe(currentNode);
       }
   
       return () => {
-        if (colorBarRef.current) {
-          observer.unobserve(colorBarRef.current);
+        if (currentNode) {
+          observer.unobserve(currentNode);
         }
       };
     }, []);
