@@ -43,23 +43,22 @@ const About = () => {
                             <h2 className="mb-4 text-lg font-bold uppercase text-dark/75
                             dark:text-light/75">Biography</h2>
                             <p className="font-medium">
-                                Hello world, I am Ian. I am a Telecommunications engineer specialized in Computer Vision.  
+                                Hello world, I am Ian. I am a Telecommunications engineer with a strong specialization in Computer Vision and Machine Learning.
                             </p>
                             <p className="my-4 font-medium">
                                 I am currently working at <a href="https://coatingai.com/" className="underline hover:text-blue-800">CoatingAI AG</a>, a startup that aims to leverage the power of artificial intelligence
                                 to automate coating processes and boost efficiency.
-                                My main role includes developing software tools for computer vision based solutions,
+                                My main role includes developing software tools for machine learning solutions,
                                 both as standalone applications and packages of the company&apos;s full software pipeline.
-                            </p>
-                            <p className="my-4 font-medium">
-                                Lately, I have been helping with the development of a web application for the company&apos;s current flagship product, the Flightpath.
+                                My responsibilities span the full pipeline: GPU-accelerated dataset generation,
+                                development and refinement of in-house deep learning models,
+                                evaluation and visualization of training metrics,
+                                and deployment of containerized services on GCloud.
                             </p>
                             <p className="font-medium">
                                 Whether it is for work or for fun, I love to explore new technologies and learn new skills.
                                 From data science to web development, I am always looking for new challenges to tackle. Currently, paying
-                                attention to the latest trends in AI, exploring the potential of these tools and how to apply them to real world problems. I guess it&apos;s all about
-                                writing the right prompt!
-
+                                attention to the latest trends in AI, exploring the potential of these tools and how to exploit them in practical applications.
                             </p>
                         </div>
 

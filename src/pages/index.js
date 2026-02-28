@@ -50,12 +50,22 @@ export default function Home() {
                 className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl
                 md:!text-5xl sm:!text-3xl' />
               <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
-              I am a Machine Learning Engineer specialized in 3D Computer Vision, MLOps, and production-grade AI systems. 
+              I am a Machine Learning Engineer specialized in 3D Computer Vision, MLOps, and production-grade AI systems.
+              </p>
+              <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
               My work spans the full lifecycle of intelligent systems: from dataset generation and perception algorithm design to model deployment and continuous learning in cloud environments.
-              I have built and optimized real-time 3D tracking pipelines, implemented object detection and pose estimation systems, and developed GPU-accelerated geometry processing methods—achieving significant runtime improvements in large-scale data pipelines.
+              I have built and optimized real-time 3D tracking pipelines, 
+              implemented object detection and pose estimation systems, 
+              and developed GPU-accelerated geometry processing methods—achieving significant runtime improvements in large-scale data pipelines.
+              </p>
+              <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
               My experience includes point cloud reconstruction, sensor fusion, and multi-modal deep learning, combined with strong expertise in PyTorch-based development.
+              </p>
+              <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
               Beyond modeling, I focus on operational excellence: containerization, GCloud deployment, experiment tracking (MLflow), data versioning (DVC), and incremental learning strategies for production systems.
               I also contribute across the stack when needed, including ROS-based perception systems and web applications (Vue.js, Django).
+              </p>
+              <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
               My approach is pragmatic and systems-oriented: design robust pipelines, optimize computational performance, deploy reliably, and iterate continuously.
               </p>
               <div className='flex items-center self-start mt-2 gap-4 lg:self-center lg:flex-col lg:items-center lg:gap-3'>
