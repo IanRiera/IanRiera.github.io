@@ -84,28 +84,22 @@ const Skills = () => {
         <div>
             <h2 className="font-bold text-8xl mt-64 w-full text-center
             dark:text-light lg:text-6xl lg:mt-24 md:text-6xl md:mt-20">Skills</h2>
-            <AnimatedColorBar title="Python" width={85} color="green" />
-            <AnimatedColorBar title="JavaScript" width={60} color="green" />
-            <AnimatedColorBar title="C++" width={55} color="green" />
-            <AnimatedColorBar title="Matlab" width={55} color="green" />
+            <AnimatedColorBar title="Python" width={90} color="green" />
+            <AnimatedColorBar title="JavaScript" width={70} color="green" />
+            <AnimatedColorBar title="C++" width={45} color="green" />
             <hr className="border-2 border-solid"></hr>
-            <AnimatedColorBar title="Linux" width={80} color="blue" />
-            <AnimatedColorBar title="Git" width={70} color="blue" />
+            <AnimatedColorBar title="Linux" width={90} color="blue" />
+            <AnimatedColorBar title="Git" width={90} color="blue" />
+            <AnimatedColorBar title="Docker" width={80} color="blue" />
+            <AnimatedColorBar title="GCloud" width={70} color="blue" />
             <AnimatedColorBar title="ROS" width={60} color="blue" />
-            <AnimatedColorBar title="GCloud" width={50} color="blue" />
             <hr className="border-2 border-solid"></hr>
+            <AnimatedColorBar title="Pytorch" width={80} color="indigo" />
             <AnimatedColorBar title="Open3D" width={80} color="indigo" />
-            <AnimatedColorBar title="OpenCV" width={70} color="indigo" />
-            <AnimatedColorBar title="Tensorflow" width={60} color="indigo" />
-            <AnimatedColorBar title="Pytorch" width={60} color="indigo" />
+            <AnimatedColorBar title="OpenCV" width={80} color="indigo" />
             <hr className="border-2 border-solid"></hr>
-            <AnimatedColorBar title="Object Detection" width={85} color="purple" />
-            <AnimatedColorBar title="3D reconstruction" width={75} color="purple" />
-            <AnimatedColorBar title="Multi Target Tracking" width={70} color="purple" />
-            <AnimatedColorBar title="Sensor Fusion" width={60} color="purple" />
-            <hr className="border-2 border-solid"></hr>
-            <AnimatedColorBar title="Agile" width={85} color="yellow" />
-            <AnimatedColorBar title="DevOps" width={70} color="yellow" />
+            <AnimatedColorBar title="Agile" width={90} color="yellow" />
+            <AnimatedColorBar title="DevOps" width={90} color="yellow" />
             <hr className="border-2 border-solid"></hr>
             <AnimatedColorBar title="Spanish" width={100} color="orange" />
             <AnimatedColorBar title="Catalan" width={100} color="orange" />
