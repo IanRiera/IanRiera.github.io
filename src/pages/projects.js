@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
@@ -24,7 +23,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
             <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark
             rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]"
             ></div>
-            <Link href={link} target={"_blank"}
+            <Link href={link} target={"_blank"} rel="noopener noreferrer"
                 className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
             >
                 <FramerImage src={img} alt={title} className="w-full h-auto"
@@ -41,14 +40,14 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
                 <span className="text-primary dark:text-primaryDark font-medium text-xl
                 xs:text-base"
                 >{type}</span>
-                <Link href={link} target={"_blank"} className="hover:underline underline-offset-2">
+                <Link href={link} target={"_blank"} rel="noopener noreferrer" className="hover:underline underline-offset-2">
                     <h2 className="my-2 w-full text-left text-4xl font-bold sm:text-sm">{title}</h2>
                 </Link>
                 <p className="my-2 font-medium text-dark dark:text-light
                 sm:text-sm">{summary}</p>
                 <div className="mt-2 flex items-center">
-                    <Link href={github} target={"_blank"} className="w-10"> <GithubIcon /></Link>
-                    <Link href={link} target={"_blank"}
+                    <Link href={github} target={"_blank"} rel="noopener noreferrer" className="w-10"> <GithubIcon /></Link>
+                    <Link href={link} target={"_blank"} rel="noopener noreferrer"
                         className="ml-4 rounded-lg bg-dark text-light dark:bg-light dark:text-dark p-2 px-6 text-lg 
                     font-semibold sm:px-4 sm:text-base"
                     >Read More</Link>
@@ -66,7 +65,7 @@ const Project = ({ title, type, img, summary, link, github }) => {
         p-6 relative xs:p-4">
             <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark
             rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"></div>
-            <Link href={link} target={"_blank"}
+            <Link href={link} target={"_blank"} rel="noopener noreferrer"
                 className="w-full cursor-pointer overflow-hidden rounded-lg"
             >
                 <FramerImage src={img} alt={title} className="w-full h-auto" 
@@ -78,27 +77,42 @@ const Project = ({ title, type, img, summary, link, github }) => {
                 <span className="text-primary dark:text-primaryDark font-medium text-xl
                 lg:text-lg md:text-base"
                 >{type}</span>
-                <Link href={link} target={"_blank"} className="hover:underline underline-offset-2">
+                <Link href={link} target={"_blank"} rel="noopener noreferrer" className="hover:underline underline-offset-2">
                     <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">{title}</h2>
                 </Link>
                 <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
                 <div className="w-full mt-2 flex items-center justify-between">
-                    <Link href={link} target={"_blank"}
+                    <Link href={link} target={"_blank"} rel="noopener noreferrer"
                         className="underline text-lg 
                     font-semibold md:text-base"
                     >Read More</Link>
-                    <Link href={github} target={"_blank"} className="w-8 md:w-6"> <GithubIcon />{" "}</Link>
+                    <Link href={github} target={"_blank"} rel="noopener noreferrer" className="w-8 md:w-6"> <GithubIcon />{" "}</Link>
                 </div>
             </div>
         </article>
     )
 }
-const projects = () => {
+const Projects = () => {
+    const title = "Projects | Ian Riera";
+    const description = "Selected computer vision and machine learning projects, including 3D reconstruction, tracking, and scene understanding.";
+    const url = "https://ianriera.github.io/projects";
+    const image = "https://ianriera.github.io/images/projects/scene_understanding.png";
+
     return (
         <>
             <Head>
-                <title>Projects | Ian Riera</title>
-                <meta name="description" content="Ian Riera personal website" />
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <link rel="canonical" href={url} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:url" content={url} />
+                <meta property="og:image" content={image} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={image} />
             </Head>
             <TransitionEffect />
             <main className="pt-12 w-full mb-16 flex flex-col items-center justify-center
@@ -143,7 +157,7 @@ const projects = () => {
                                 summary="Study of the behaviour of different configurations of RetinaNet, Faster R-CNN and Mask R-CNN,
                                 using the Detectron2 framework. The evaluation is done both qualitatively and quantitatively on
                                 KITTI-MOTS, MOTSChallenge, Cityscapes and out of context datasets."
-                                link="3D-reconstruction-urban-scenes.pdf"
+                                link="/3D-reconstruction-urban-scenes.pdf"
                                 github="https://github.com/IanRiera/MCV-M4-3D-Vision"
                                 type=""
                             />
@@ -180,6 +194,6 @@ const projects = () => {
 
         </>
     )
-}
+};
 
-export default projects
+export default Projects;

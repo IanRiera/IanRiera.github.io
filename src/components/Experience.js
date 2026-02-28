@@ -18,6 +18,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
             <h3 className="capitalize font-bold text-2xl
             sm:text-xl xs:text-lg">{position}&nbsp;<a href={companyLink}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-primary dark:text-primaryDark capitalize"
             >@{company}</a></h3>
             <span className="capitalize font-medium text-dark/75 dark:text-light/75
@@ -53,10 +54,22 @@ const Experience = () => {
                     md:w-[2px] md:left-[30px] xs:left-[20px]"/>
                     <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2" >
                     <Details
+                        position="Machine Learning Engineer"
+                        company="coatingAI"
+                        companyLink="https://coatingai.com"
+                        time="April 2025 - Present"
+                        address="(remote) Barcelona, Spain"
+                        work="I am involved in the continuous development and refinement of proprietary deep learning models, 
+                        primarily using PyTorch. My responsibilities include dataset generation, experiment tracking, 
+                        and systematic evaluation of training metrics to guide model improvements. 
+                        From an operational perspective, I containerize models and supporting frameworks,
+                        deploy them as services and jobs on GCloud, and maintain reproducible workflows using tools such as MLflow and DVC." 
+                    />
+                    <Details
                         position="Computer Vision Engineer"
                         company="coatingAI"
                         companyLink="https://coatingai.com"
-                        time="May 2022 - Present"
+                        time="May 2022 - April 2025"
                         address="(remote) Barcelona, Spain"
                         work="I am actively involved in the development of a cutting-edge 3D reconstruction
                         pipeline, comprising camera drivers, recording tools, and advanced techniques for 

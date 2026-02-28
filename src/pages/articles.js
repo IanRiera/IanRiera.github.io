@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Head from "next/head";
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
@@ -20,6 +20,7 @@ const FeaturedArticle = ({ img, title, summary, time, link }) => {
             <Link
                 href={link}
                 target={"_blank"}
+                rel="noopener noreferrer"
                 className="w-full inline-block cursor-pointer overflow-hidden rounded-lg
                 "
             >
@@ -32,8 +33,8 @@ const FeaturedArticle = ({ img, title, summary, time, link }) => {
                     50vw"/>
 
             </Link>
-            <Link href={link} target={"_blank"}>
-                <h2 className="capitalize my-2 mt-4 text-2xl font-bold over:underline
+            <Link href={link} target={"_blank"} rel="noopener noreferrer">
+                <h2 className="capitalize my-2 mt-4 text-2xl font-bold hover:underline underline-offset-2
                 xs:text-lg">{title}</h2>
             </Link>
             <p className="text-sm mb-2">{summary}</p>
@@ -79,12 +80,12 @@ const MovingImage = ({ title, img, link }) => {
     }
 
     return (
-        <Link href={link} target={"_blank"}
+        <Link href={link} target={"_blank"} rel="noopener noreferrer"
         onMouseMove={handleMouse}
         onMouseLeave={handleMouseLeave}
             className="w-full inline-block cursor-pointer overflow-hidden rounded-lg"
         >
-            <h2 className="capitalize text-xl font-bold over:underline">{title}</h2>
+            <h2 className="capitalize text-xl font-bold hover:underline underline-offset-2">{title}</h2>
             <FramerImage 
             style={{x:x, y:y}}
             initial={{opacity:0}}
@@ -95,12 +96,27 @@ const MovingImage = ({ title, img, link }) => {
     )
 }
 
-const articles = () => {
+const Articles = () => {
+    const title = "Articles | Ian Riera";
+    const description = "Articles and notes on frontend engineering and practical software topics.";
+    const url = "https://ianriera.github.io/articles";
+    const image = "https://ianriera.github.io/images/projects/museum_painting_retrieval.png";
+
     return (
         <>
             <Head>
-                <title>Articles | Ian Riera</title>
-                <meta name="description" content="Ian Riera personal website" />
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <link rel="canonical" href={url} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:url" content={url} />
+                <meta property="og:image" content={image} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={image} />
             </Head>
             <TransitionEffect />
             <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden
@@ -132,6 +148,6 @@ const articles = () => {
             </main>
         </>
     );
-}
+};
 
-export default articles;
+export default Articles;

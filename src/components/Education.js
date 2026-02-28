@@ -18,6 +18,7 @@ const Details = ({ type, time, place, university, universityLink, info }) => {
             <h3 className="capitalize font-bold text-2xl
             sm:text-xl xs:text-lg">{type}&nbsp;<a href={universityLink}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-primary dark:text-primaryDark capitalize"
             >@{university}</a></h3>
             <span className="capitalize font-medium text-dark/75 dark:text-light/75
@@ -56,7 +57,7 @@ const Education = () => {
                         type="M.Sc. In Computer Vision"
                         university="Universitat Autònoma de Barcelona — Computer Vision Center (CVC)"
                         time="2020-2021"
-                        address="Barcelona, Spain"
+                        place="Barcelona, Spain"
                         info="Specialization that provides the foundations of Computer Vision, a technology within the Artificial Intelligence field,
                         that acts as a fundamental component to perform smart tasks in systems such as assisting medical diagnosis and surgery,
                         autonomous car driving, industry quality control, surveillance applications, or improving interfaces for multimedia data access."
@@ -65,7 +66,7 @@ const Education = () => {
                         type="M.Sc. In Telecommunication Engineering"
                         university="La Salle - Universitat Ramon Llull (URL)"
                         time="2017-2019"
-                        address="Barcelona, Spain"
+                        place="Barcelona, Spain"
                         info="The master covered the design and communication systems network concepts, hardware and software developments (reaching prototype level),
                         radiofrequency systems, technology project management and business creation."
                     />
@@ -73,7 +74,7 @@ const Education = () => {
                         type="B.Sc. In Telecommunication Engineering"
                         university="Universitat Politècnica de Catalunya (UPC)"
                         time="2011-2017"
-                        address="Barcelona, Spain"
+                        place="Barcelona, Spain"
                         info="Covered competences in Telecommunication Systems, 
                         Audiovisual Systems, Telematics, and Electronics."
                     />
