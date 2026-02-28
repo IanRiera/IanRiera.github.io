@@ -35,8 +35,8 @@ const About = () => {
             <main className="pt-12 flex w-full flex-col items-center justify-center dark:text-light
             ">
                 <Layout className="pt-16">
-                    <AnimatedText text="Exploring the Potential of AI and Computer Vision! " className="mb-16
-                    lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8" />
+                    <AnimatedText text="Exploring the Potential of AI!" className="mb-16
+                    lg:!text-5xl sm:!text-4xl xs:!text-2xl sm:mb-8" />
                     <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
                         <div className="col-span-4 flex flex-col items-start justify-stretch
                         md:order-2 md:col-span-8 leading-loose">
